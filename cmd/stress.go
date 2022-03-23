@@ -50,7 +50,7 @@ var stressCmd = &cobra.Command{
 				stressCfg.Targets[i].RegexURL = viper.GetBool("regex")
 				stressCfg.Targets[i].Options.DNSPrefetch = viper.GetBool("dns-prefetch")
 				stressCfg.Targets[i].Options.Timeout = viper.GetString("timeout")
-				stressCfg.Targets[i].Options.Method = viper.GetString("request-method")
+				stressCfg.Targets[i].Options.Method = viper.GetString("method")
 				stressCfg.Targets[i].Options.Body = viper.GetString("body")
 				stressCfg.Targets[i].Options.RegexBody = viper.GetBool("body-regex")
 				stressCfg.Targets[i].Options.BodyFilename = viper.GetString("body-file")
@@ -81,7 +81,7 @@ var stressCmd = &cobra.Command{
 					stressCfg.Targets[i].Options.Timeout = viper.GetString("timeout")
 				}
 				if _, set := targetMapVals["Method"]; !set {
-					stressCfg.Targets[i].Options.Method = viper.GetString("request-method")
+					stressCfg.Targets[i].Options.Method = viper.GetString("method")
 				}
 				if _, set := targetMapVals["Body"]; !set {
 					stressCfg.Targets[i].Options.Body = viper.GetString("body")

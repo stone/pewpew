@@ -51,7 +51,7 @@ var benchmarkCmd = &cobra.Command{
 				benchmarkCfg.Targets[i].RegexURL = viper.GetBool("regex")
 				benchmarkCfg.Targets[i].Options.DNSPrefetch = viper.GetBool("dns-prefetch")
 				benchmarkCfg.Targets[i].Options.Timeout = viper.GetString("timeout")
-				benchmarkCfg.Targets[i].Options.Method = viper.GetString("request-method")
+				benchmarkCfg.Targets[i].Options.Method = viper.GetString("method")
 				benchmarkCfg.Targets[i].Options.Body = viper.GetString("body")
 				benchmarkCfg.Targets[i].Options.BodyFilename = viper.GetString("body-file")
 				benchmarkCfg.Targets[i].Options.Headers = viper.GetString("headers")
@@ -81,7 +81,7 @@ var benchmarkCmd = &cobra.Command{
 					benchmarkCfg.Targets[i].Options.Timeout = viper.GetString("timeout")
 				}
 				if _, set := targetMapVals["Method"]; !set {
-					benchmarkCfg.Targets[i].Options.Method = viper.GetString("request-method")
+					benchmarkCfg.Targets[i].Options.Method = viper.GetString("method")
 				}
 				if _, set := targetMapVals["Body"]; !set {
 					benchmarkCfg.Targets[i].Options.Body = viper.GetString("body")
