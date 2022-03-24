@@ -1,3 +1,7 @@
+# Fork information
+This is a personal fork to scratch my very specific itch(es).
+
+
 # Pewpew [![Workflow](https://img.shields.io/github/workflow/status/bengadbois/pewpew/build%20and%20test/master?style=flat-square)](https://github.com/bengadbois/pewpew/actions/workflows/build-and-test.yml) [![Go Report Card](https://goreportcard.com/badge/github.com/bengadbois/pewpew?style=flat-square)](https://goreportcard.com/report/github.com/bengadbois/pewpew) [![Coveralls branch](https://img.shields.io/coveralls/bengadbois/pewpew/master.svg?style=flat-square)](https://coveralls.io/github/bengadbois/pewpew?branch=master) [![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](https://godoc.org/github.com/bengadbois/pewpew/lib)
 
 Pewpew is a flexible command line HTTP stress tester. Unlike other stress testers, it can hit multiple targets with multiple configurations, simulating real world load and bypassing caches.
