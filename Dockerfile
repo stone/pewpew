@@ -1,5 +1,5 @@
 # Build
-FROM golang:1.15-buster AS build
+FROM golang:1.18-buster AS build
 WORKDIR /go/pewpew
 COPY . .
 
