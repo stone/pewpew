@@ -1,5 +1,5 @@
 # Build
-FROM golang:1.15-buster AS build
+FROM golang:1.18-buster AS build
 WORKDIR /go/pewpew
 COPY . .
 
@@ -10,5 +10,6 @@ RUN go build
 # Run
 FROM scratch
 
-COPY --from=build /go/pewpew/pewpew /bin/pewpew
-CMD ["/bin/pewpew"]
+COPY --from=build /go/pewpew/pewpew /pewpew
+ENTRYPOINT ["/pewpew"]
+CMD ["help"]
